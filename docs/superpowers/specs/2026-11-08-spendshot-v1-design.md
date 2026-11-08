@@ -75,7 +75,7 @@ Tambahkan juga target **unit test** (Swift Testing, `@Test`) untuk logika yang t
 
 ## Perubahan build setting (`project.xcproj`)
 - `TARGETED_DEVICE_FAMILY` menjadi `"1"`, dan `SUPPORTED_PLATFORMS` menjadi `"iphoneos iphonesimulator"` (iPhone saja).
-- `PRODUCT_BUNDLE_IDENTIFIER` menjadi `id.nyanhosting.spendshot` (bisa dikonfirmasi lagi nanti).
+- `PRODUCT_BUNDLE_IDENTIFIER` menjadi `id.rizkyhaksono.spendshot`.
 - `IPHONEOS_DEPLOYMENT_TARGET` saat ini `27.2`. **Perlu dicek apakah iPhone 12 Rizky sudah menjalankan iOS 27.** Kalau belum, turunkan target ke versi iOS yang terpasang di HP-nya. Fitur di rencana ini hanya butuh iOS 17 ke atas.
 - `SWIFT_VERSION` dinaikkan menjadi `6.0` (strict concurrency).
 
