@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Xcode per-user state and build output
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# Local secrets (phase 2: xcconfig with backend URL overrides)
+Secrets.xcconfig
+*.env
+.env*
+
+# Superdesign local state (design-system.md is kept)
+.superdesign/*
+!.superdesign/design-system.md
