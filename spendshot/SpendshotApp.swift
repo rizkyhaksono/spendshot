@@ -8,6 +8,9 @@ struct SpendshotApp: App {
             ExpenseListView()
                 .tint(.accentPixel)
                 .environment(\.locale, .app)
+                #if DEBUG
+                .modifier(DebugSeed())
+                #endif
         }
         .modelContainer(for: Expense.self)
     }

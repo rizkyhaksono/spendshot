@@ -47,14 +47,17 @@ private struct PixelBar: View {
 
     var body: some View {
         GeometryReader { geo in
+            // Segment widths share what is left after the 2pt gaps, so the bar never overflows.
+            let available = max(0, geo.size.width - CGFloat(rows.count - 1) * 2)
             HStack(spacing: 2) {
                 ForEach(rows, id: \.category) { row in
                     Rectangle()
                         .fill(row.category.color)
-                        .frame(width: max(2, geo.size.width * share(row.total)))
+                        .frame(width: available * share(row.total))
                 }
             }
         }
+        .clipped()
         .overlay(Rectangle().strokeBorder(Color.ink, lineWidth: 2))
     }
 
